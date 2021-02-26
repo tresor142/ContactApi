@@ -1,0 +1,74 @@
+<div class="container spacer">
+  <div class="panel panel-primary" *ngIf="mode==1">
+    <div class="panel-heading">Nouveau contact</div>
+    <div class="panel-body">
+      <div >
+        <div  class="form-group">
+        <label for="" class="control-label">Nom:</label>
+        <input class="form-control" type="text" [(ngModel)]="contact.nom" name="nom">
+      </div>
+      <div  class="form-group">
+        <label for="" class="control-label">Preom:</label>
+        <input class="form-control" type="text" [(ngModel)]="contact.prenom" name="prenom">
+      </div>
+      <div  class="form-group">
+        <label for="" class="control-label">Email:</label>
+        <input class="form-control" type="text" [(ngModel)]="contact.email" name="email">
+      </div>
+      <div  class="form-group">
+        <label for="" class="control-label">Telephone:</label>
+        <input class="form-control" type="text" [(ngModel)]="contact.tel" name="tel">
+      </div>
+      <div  class="form-group">
+        <label for="" class="control-label">Photo:</label>
+        <input class="form-control" type="text" [(ngModel)]="contact.photo" name="tof">
+      </div>
+              <button class="btn btn-primary" (click)="saveContact()">Save</button>
+      </div>
+      <div *ngIf="mode==2">
+
+      </div>
+    </div>
+  </div>
+
+
+    <div class="panel panel-primary" *ngIf="mode==2">
+    <div class="panel-heading">Confirmation</div>
+    <div class="panel-body">
+      <div >
+         <div  class="form-group">
+        <label for="" class="control-label">ID:</label>
+          <label for="">{{contact.id}}</label>
+      </div>
+        <div  class="form-group">
+        <label for="" class="control-label">Nom:</label>
+          <label for="">{{contact.nom}}</label>
+      </div>
+      <div  class="form-group">
+        <label for="" class="control-label">Preom:</label>
+                  <label for="">{{contact.prenom}}</label>
+      </div>
+      <div  class="form-group">
+        <label for="" class="control-label">Email:</label>
+        <label for="">{{contact.email}}</label>
+      </div>
+      <div  class="form-group">
+        <label for="" class="control-label">Telephone:</label>
+        <label for="">{{contact.tel}}</label>
+      </div>
+      <div  class="form-group">
+        <label for="" class="control-label">Photo:</label>
+        <label for="">{{contact.photo}}</label>
+      </div>
+              <button class="btn btn-primary" (click)="mode=1">Nouveau Contact</button>
+      </div>
+      <div *ngIf="mode==2">
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>

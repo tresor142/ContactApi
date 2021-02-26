@@ -1,0 +1,32 @@
+<div class="container spacer">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Liste des contact</div>
+  <div class="panel-body">
+    <div class="form-group">
+      <label for="">Mot clé</label>
+      <input type="text" [(ngModel)]="motCle"/>
+      <button class="btn-primary" (click)="chercher">Chercher</button>
+    </div>
+    <table class="table tabble-striped">
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Email</th>
+      </tr>
+      <tr *ngFor="let c of pageContacts">
+          <td>{{c.id}}</td>
+          <td>{{c.nom}}</td>
+          <td>{{c.prenom}}</td>
+          <td>{{c.email}}</td>
+
+          <td>
+            <a (click)="onEditContact(c.id)" class="clickable">Edit</a>
+          </td>
+
+      </tr>
+    </table>
+  </div>
+  </div>
+</div>
+
